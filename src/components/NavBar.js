@@ -3,12 +3,13 @@ import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Container from '@mui/material/Container'
 import Toolbar from '@mui/material/Toolbar'
+import './NavBar.scss'
 
 const menuItems = ['Productos', 'Nosotros', 'Contacto'];
 
 const NavBar = () => {
     return (
-        <AppBar position="static">
+        <AppBar className="NavBar" position="static">
             <Container maxWidth="xl">
                 <Toolbar className="toolbar" disableGutters>
                     <h1>QBR</h1>
