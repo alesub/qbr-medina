@@ -1,0 +1,26 @@
+.App {
+    header {
+        background-color: #333;
+
+        h1 {
+            background: url(../../images/logo.svg) no-repeat;
+            background-size: cover;
+            height: 50px;
+            overflow: hidden;
+            text-indent: -9999px;
+            width: 74px;
+        }
+
+        .toolbar {
+            justify-content: space-between;
+
+            .main-menu {
+                display: flex;
+
+                button {
+                    color: #ccc;
+                }
+            }
+        }
+    }
+}
