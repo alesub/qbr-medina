@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Environments
 
-- Production: [https://qbr.vercel.app/]https://qbr.vercel.app
+- Production: [https://qbr.vercel.app/](https://qbr.vercel.app)
 
 ## Installation
 
