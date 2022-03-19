@@ -1,10 +1,14 @@
-import NavBar from "./components/NavBar";
+import { Container } from "@mui/material";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   return (
     <div className="App">
       <NavBar></NavBar>
-      <h2>Qué Buena Remera!</h2>
+      <Container className="MainContainer" maxWidth="lg" sx={{ boxShadow: 3 }}>
+        <ItemListContainer></ItemListContainer>
+      </Container>
     </div>
   );
 }

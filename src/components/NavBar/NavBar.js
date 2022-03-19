@@ -1,6 +1,7 @@
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
+import CartWidget from '../CartWidget/CartWidget'
 import Container from '@mui/material/Container'
 import Toolbar from '@mui/material/Toolbar'
 import './NavBar.scss'
@@ -20,6 +21,7 @@ const NavBar = () => {
                         </Button>
                         ))}
                     </Box>
+                    <CartWidget></CartWidget>
                 </Toolbar>
             </Container>
         </AppBar>
