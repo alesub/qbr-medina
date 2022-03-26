@@ -3,15 +3,17 @@ import { AddCircle, RemoveCircle } from "@mui/icons-material"
 import { useState } from "react"
 import './ItemCount.scss'
 
-const ItemCount = () => {
-    const [quantity, setQuantity] = useState(1);
+const ItemCount = ({ initial = 0, stock}) => {
+    const [quantity, setQuantity] = useState(initial);
 
     const addQuantity = () => {
-        setQuantity(quantity + 1)
+        if (quantity < stock) {
+            setQuantity(quantity + 1)
+        }
     }
 
     const removeQuantity = () => {
-        if (quantity > 1) {
+        if (quantity > initial) {
             setQuantity(quantity - 1)
         }
     }
