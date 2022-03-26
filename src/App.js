@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <NavBar></NavBar>
       <Container className="MainContainer" maxWidth="lg" sx={{ boxShadow: 3 }}>
-        <ItemListContainer></ItemListContainer>
+        <ItemListContainer />
       </Container>
     </div>
   );
