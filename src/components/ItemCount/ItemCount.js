@@ -1,9 +1,9 @@
-import { TextField } from "@mui/material"
+import { Button, TextField } from "@mui/material"
 import { AddCircle, RemoveCircle } from "@mui/icons-material"
 import { useState } from "react"
 import './ItemCount.scss'
 
-const ItemCount = ({ initial = 0, stock}) => {
+const ItemCount = ({ initial = 0, stock, onAdd}) => {
     const [quantity, setQuantity] = useState(initial);
 
     const addQuantity = () => {
@@ -20,9 +20,12 @@ const ItemCount = ({ initial = 0, stock}) => {
 
     return (
         <div className="ItemCount">
-            <RemoveCircle fontSize="large" onClick={removeQuantity} />
-            <TextField name="itemQuantity" className="itemQuantity" label="Cantidad" variant="outlined" value={quantity} />
-            <AddCircle fontSize="large" onClick={addQuantity} />
+            <div>
+                <RemoveCircle fontSize="large" onClick={removeQuantity} />
+                <TextField name="itemQuantity" className="itemQuantity" label="Cantidad" variant="outlined" value={quantity} />
+                <AddCircle fontSize="large" onClick={addQuantity} />
+            </div>
+            <Button onClick={() => onAdd(quantity)} variant="contained">Agregar al carrito</Button>
         </div>
     )
 }
