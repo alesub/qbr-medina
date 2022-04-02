@@ -1,16 +1,23 @@
 import { Typography } from "@mui/material"
-import ItemCount from "../ItemCount/ItemCount"
+import { getProducts } from "../../asyncmock"
+import ItemList from "../ItemList/ItemList"
+import { useState, useEffect } from 'react'
 
 const ItemListContainer = () => {
-    const onAdd = (quantity) => {
-        console.log(`Adding to cart ${quantity} products`)
-    }
+    const [products, setProducts] = useState([])
+
+    useEffect(() => {
+        getProducts().then(response => {
+            setProducts(response)
+        })
+    }, [])
+
     return (
         <div className="ItemListContainer">
-            <Typography variant="h4" component="h2">
-                Conocé nuestros productos
+            <Typography variant="h4" component="h2" marginBottom={3}>
+                Remeras Destacadas
             </Typography>
-            <ItemCount initial={1} stock={10} onAdd={onAdd} />
+            <ItemList products={products} />
         </div>
     )
 }
