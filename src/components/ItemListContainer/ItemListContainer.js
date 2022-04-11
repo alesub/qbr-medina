@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material"
+import { Container, Typography } from "@mui/material"
 import { getProducts } from "../../asyncmock"
 import ItemList from "../ItemList/ItemList"
 import { useState, useEffect } from 'react'
@@ -13,12 +13,14 @@ const ItemListContainer = () => {
     }, [])
 
     return (
-        <div className="ItemListContainer">
-            <Typography variant="h4" component="h2" marginBottom={3}>
-                Remeras Destacadas
-            </Typography>
-            <ItemList products={products} />
-        </div>
+        <Container className="MainContainer" maxWidth="lg" sx={{ boxShadow: 3 }}>
+            <div className="ItemListContainer">
+                <Typography variant="h4" component="h2" marginBottom={3}>
+                    Remeras Destacadas
+                </Typography>
+                <ItemList products={products} />
+            </div>
+        </Container>
     )
 }
 

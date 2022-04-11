@@ -1,9 +1,10 @@
 import { Card, CardActionArea, CardMedia, CardContent, Typography } from "@mui/material"
+import { Link } from 'react-router-dom'
 
 const Item = ({ id, name, img, price, stock}) => {
     return(
         <Card sx={{ maxWidth: 345, textAlign: 'center' }}>
-            <CardActionArea>
+            <CardActionArea component={Link} to={`/detail/${id}`}>
                 <CardMedia
                     component="img"
                     height="300"
